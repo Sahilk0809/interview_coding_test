@@ -14,6 +14,9 @@ This Flutter app is designed to make managing your contacts simple and seamless,
 
 This app is all about reliability and simplicity, giving you a smooth and enjoyable experience while keeping your contacts easily accessible at all times.
 
+<img src = "https://github.com/user-attachments/assets/a1f4be08-8426-48f0-8eed-7836c0d4ff66" height = 65% width = 22%>
 <img src = "https://github.com/user-attachments/assets/48cc2f8b-0d03-4fb6-ab9b-f9003004b850" height = 65% width = 22%>
 <img src = "https://github.com/user-attachments/assets/3a68cdb1-9a87-4b14-91ed-e83c91677541" height = 65% width = 22%>
 <img src = "https://github.com/user-attachments/assets/5af009e5-c095-425a-ba94-4676762889b9" height = 65% width = 22%>
+
+
