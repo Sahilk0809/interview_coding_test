@@ -1,18 +1,18 @@
-# interview_coding_test
-
 ## Description
 
-This Contact App is designed to display a list of user contacts fetched from an API. The app provides the following key features:
+This Flutter app is designed to make managing your contacts simple and seamless, whether you're online or offline. It combines a clean, user-friendly interface with smart features to ensure you always have access to your contacts. Here's what makes it stand out:
 
-**Dynamic Contact List**: Users can scroll through a dynamically updated list of contacts, which includes the contact's avatar, full name, and email address.
+- **Smooth Data Loading**: The app starts by fetching a small number of contacts from an API and loads more as you scroll down. This keeps the experience fast and responsive while making it easy to explore all your contacts.
 
-**Pagination Support**: The app efficiently handles large contact datasets by fetching and loading data in pages as the user scrolls to the bottom of the list.
+- **Works Offline Too**: Don’t worry if you lose internet access! The app automatically switches to offline mode, showing contacts saved in a local database so you can keep using it without any interruptions.
 
-**Detailed Contact View**: By tapping on a contact, users can navigate to a detailed page displaying comprehensive information about the selected contact.
+- **Real-Time Network Awareness**: Using the connectivity_plus package, the app detects whether you’re online or offline and adjusts accordingly. You’ll even get a helpful toast notification if you go offline.
 
-**Responsive Design**: The UI adapts seamlessly to different screen sizes, ensuring a consistent and user-friendly experience across various devices.
+- **Beautiful, Responsive Design**: Whether you’re using a phone or a tablet, the app adapts perfectly to your screen size. Contacts are displayed in neat, modern cards with details like profile pictures, names, and email addresses.
 
-**Modern UI Components**: The app uses Material Design principles, incorporating cards, rounded avatars, and subtle elevation effects for a clean and professional look.
+- **Quick Access to Details**: Tap on any contact to view their full details on a dedicated page, making it easy to stay connected.
+
+This app is all about reliability and simplicity, giving you a smooth and enjoyable experience while keeping your contacts easily accessible at all times.
 
 <img src = "https://github.com/user-attachments/assets/48cc2f8b-0d03-4fb6-ab9b-f9003004b850" height = 65% width = 22%>
 <img src = "https://github.com/user-attachments/assets/3a68cdb1-9a87-4b14-91ed-e83c91677541" height = 65% width = 22%>
