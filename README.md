@@ -20,4 +20,4 @@ This app is all about reliability and simplicity, giving you a smooth and enjoya
 <img src = "https://github.com/user-attachments/assets/5af009e5-c095-425a-ba94-4676762889b9" height = 65% width = 22%>
 
 ## 👇Video Link👇
-<a href = "https://drive.google.com/file/d/1wq4xQsm9rEOOpd4KhbAYeuOOvthZjohe/view?usp=sharing"> Tap here to view video </a>
+<a href = "https://drive.google.com/file/d/1u54AF7we3e0koUfrhHmDnlQmHBIT1OV6/view?usp=sharing"> Tap here to view video </a>
