@@ -2,6 +2,7 @@ import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DatabaseHelper {
+  // Singleton class
   static DatabaseHelper databaseHelper = DatabaseHelper._();
 
   DatabaseHelper._();
@@ -18,17 +19,18 @@ class DatabaseHelper {
     return await openDatabase(
       dbPath,
       version: 1,
-      onCreate: (db, version) {
+      onCreate: (db, version) async {
+        // Creating table
         String sql = '''
         CREATE TABLE $tableName (
-        id INTEGER PRIMARY KEY,
+        id INTEGER NOT NULL,
         email TEXT NOT NULL,
-        firstName TEXT NOT NULL,
-        lastName TEXT NOT NULL,
-        avtar TEXT NOT NULL,
+        first_name TEXT NOT NULL,
+        last_name TEXT NOT NULL,
+        avatar TEXT NOT NULL
         );
         ''';
-        db.execute(sql);
+        await db.execute(sql);
       },
     );
   }
@@ -40,8 +42,9 @@ class DatabaseHelper {
       required String lastName,
       required String avtar}) async {
     final db = await database;
+    // Inserting data to the database
     String sql = '''
-    INSERT INTO $tableName (id, email, firstName, lastName, avtar)
+    INSERT INTO $tableName (id, email, first_name, last_name, avatar)
     VALUES (?, ?, ?, ?, ?);
     ''';
     List args = [id, email, firstName, lastName, avtar];
@@ -50,9 +53,19 @@ class DatabaseHelper {
 
   Future<List<Map<String, Object?>>> readData() async {
     final db = await database;
+    // Fetching data from the database
     String sql = '''
     SELECT * FROM $tableName
     ''';
     return await db.rawQuery(sql);
+  }
+
+  Future<int> deleteData() async {
+    final db = await database;
+    // Deleting data from database
+    String sql = '''
+    DELETE FROM $tableName;
+    ''';
+    return await db.rawDelete(sql);
   }
 }

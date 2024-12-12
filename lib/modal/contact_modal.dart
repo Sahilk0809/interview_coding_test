@@ -39,9 +39,9 @@ class Contact {
     return Contact(
       id: json['id'],
       email: json['email'],
-      firstName: json['first_name'],
-      lastName: json['last_name'],
-      avatar: json['avatar'],
+      firstName: json['first_name'] ?? "Sahil",
+      lastName: json['last_name'] ?? "Kashyap",
+      avatar: json['avatar'] ?? "",
     );
   }
 }

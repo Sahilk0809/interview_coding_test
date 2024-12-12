@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:interview_coding_test/provider/contact_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../modal/contact_modal.dart';
 
@@ -10,6 +12,8 @@ class ContactDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.sizeOf(context);
+    final contactProvider =
+        Provider.of<ContactProvider>(context, listen: false);
 
     return Scaffold(
       appBar: AppBar(
@@ -26,10 +30,19 @@ class ContactDetailPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CircleAvatar(
-                radius: 70,
-                backgroundImage: NetworkImage(contact.avatar),
-                backgroundColor: Colors.grey[300],
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.indigo,
+                    width: 2,
+                  ),
+                  shape: BoxShape.circle,
+                ),
+                child: CircleAvatar(
+                  radius: 70,
+                  backgroundImage: NetworkImage(contact.avatar),
+                  backgroundColor: Colors.grey[300],
+                ),
               ),
               SizedBox(height: screenSize.height * 0.026),
               Text(
@@ -79,7 +92,9 @@ class ContactDetailPage extends StatelessWidget {
                   padding:
                       const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  contactProvider.mailLaunch(contact.email);
+                },
                 child: const Text(
                   'Send Email',
                   style: TextStyle(fontSize: 16, color: Colors.white),

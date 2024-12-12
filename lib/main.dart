@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:interview_coding_test/provider/contact_provider.dart';
-import 'package:interview_coding_test/view/home_page.dart';
+import 'package:interview_coding_test/view/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -11,7 +11,7 @@ void main() {
           create: (context) => ContactProvider(),
         ),
       ],
-      child: MyApp(),
+      builder: (context, child) => const MyApp(),
     ),
   );
 }
@@ -22,8 +22,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Contacts App',
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }
